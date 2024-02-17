@@ -7,16 +7,22 @@ import jakarta.persistence.*;
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idTransaction")
     private Integer idTransaction;
 
+    @Column(name = "transactionType")
     private String transactionType;
 
+    @Column(name = "transactionDate")
     private String transactionDate;
 
+    @Column(name = "seller")
     private String seller;
 
+    @Column(name = "buyer")
     private String buyer;
 
+    @Column(name = "total")
     private double total;
 
     public Integer getIdTransaction() {

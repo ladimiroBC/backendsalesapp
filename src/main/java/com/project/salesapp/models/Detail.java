@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Detail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idDetail")
     private Integer idDetail;
 
     @ManyToOne
@@ -17,10 +18,13 @@ public class Detail {
     @JoinColumn(name = "idTransaction")
     private Transaction transaction;
 
+    @Column(name = "purchaseDetail")
     private double purchaseDetail;
 
+    @Column(name = "amountDetail")
     private double amountDetail;
 
+    @Column(name = "totalDetail")
     private double totalDetail;
 
     public Integer getIdDetail() {

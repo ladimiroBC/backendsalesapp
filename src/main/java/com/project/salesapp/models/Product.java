@@ -7,14 +7,19 @@ import jakarta.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idProduct")
     private Integer idProduct;
 
+    @Column(name = "productName")
     private String productName;
 
+    @Column(name = "purchaseValue")
     private double purchaseValue;
 
+    @Column(name = "purchaseSale")
     private double purchaseSale;
 
+    @Column(name = "amount")
     private double amount;
 
     public Integer getIdProduct() {
